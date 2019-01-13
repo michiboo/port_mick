@@ -7,14 +7,16 @@ import PageTransition from 'gatsby-plugin-page-transitions';
 
 export default ({ children }) =>( 
 <html>
-    <PageTransition>
+   
 <Navbar>
     <Navlink link="#Home"/>
     <Navlink link="#whatIdo" />
     <Navlink link="#project" />
     <Navlink link="#contact"/>  
 </Navbar>
-</PageTransition>
+
+ <PageTransition>
 <div>{children}</div>
+</PageTransition>
 </html>
 )

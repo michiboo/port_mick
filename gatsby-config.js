@@ -5,7 +5,11 @@ module.exports = {
       description: `Portfolio website`,
     },
         plugins: [
-          'gatsby-plugin-page-transitions'
+          {resolve: 'gatsby-plugin-page-transitions',
+          options: {
+            transitionTime: 500
+          }
+        }
         ]
       
   }
