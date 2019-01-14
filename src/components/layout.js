@@ -12,7 +12,7 @@ export default ({ children }) =>(
     <Navlink link="#Home"/>
     <Navlink link="#whatIdo" />
     <Navlink link="#project" />
-    <Navlink link="#contact"/>  
+    <Navlink link="/contact"/>  
 </Navbar>
 
  <PageTransition>

@@ -32,14 +32,14 @@ class Canvas extends React.Component {
 
 //https://codepen.io/gschier/pen/jkivt 
   
-
+//640 :425
 
     render() {
       return(
-        <div>
-          <canvas ref="canvas" width={640} height={425} />
+        
+          <canvas ref="canvas" width={600} height={210} />
          
-        </div>
+        
       )
     }
   }
