@@ -3,6 +3,9 @@
     margin:auto;
     width:100%;
     float: left;
+    position: sticky;
+    overflow:hidden;
+    
 
 
 }
@@ -12,7 +15,7 @@
     margin-right:2%;
     margin-left:2%;
     
-    text-shadow: 3px 2px grey;
+    /* text-shadow: 3px 2px grey; */
 }
 
 .container  div a{

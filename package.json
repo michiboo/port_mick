@@ -12,10 +12,17 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
+    "@material-ui/core": "^3.9.0",
+    "@material-ui/icons": "^3.0.2",
     "gatsby": "^2.0.76",
     "gatsby-plugin-page-transitions": "^1.0.7",
+    "material-auto-rotating-carousel": "^3.0.1",
     "react": "^16.5.1",
-    "react-dom": "^16.5.1"
+    "react-dom": "^16.5.1",
+    "react-scrollable-anchor": "^0.6.1",
+    "react-social-icons": "^4.1.0",
+    "react-sticky": "^6.0.3",
+    "react-swipeable-views": "^0.13.1"
   },
   "repository": {
     "type": "git",

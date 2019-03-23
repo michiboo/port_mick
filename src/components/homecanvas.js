@@ -4,21 +4,34 @@ class Canvas extends React.Component {
     componentDidMount() {
       const canvas = this.refs.canvas;
       const ctx = canvas.getContext("2d");
+      const obj = this.props.text;
      
-      const textu = this.props.text;
-      
-     fadeOut( canvas, ctx, 'I am programmer',210,75);
-
+     var i = 0;
+    const lenobj = Object.keys(obj).length ;
+      setInterval(function(){ 
+     
+       
+        fadeOut( canvas, ctx, obj[i].txt,210,75);
+    
+     
+     
+     
       //wait(3000);
     //ctx.clearRect(210,75,canvas.width,canvas.height);
 
 
      setTimeout(
-      function() {
-        fadeOut(canvas, ctx, textu, 210,75);
-    }, 2000); 
       
+      function() {
+        i += 1;
+        if(i > lenobj- 1){
+          i = 0;
+        }
+        fadeOut(canvas, ctx, obj[i].txt, 110,75);
+    }, 2000); }, 5000
+    );
     
+   
      //fadeOut(canvas, ctx, this.props.text, 210,100);
     
     //   canvas.addEventListener('mousemove', function(evt) {
@@ -70,7 +83,7 @@ class Canvas extends React.Component {
           //canvas.width = canvas.width; // Clears the canvas
           ctx.clearRect(xc-30,yc-30,canvas.width, 50);
           ctx.font = "40px Courier";
-          ctx.fillStyle = "rgba(255, 255, 255, " + alpha + ")";
+          ctx.fillStyle = "rgba(0, 0, 0, " + alpha + ")";
           ctx.fillText(text, xc, yc);
           alpha = alpha - 0.1; // decrease opacity (fade out)
           if (alpha < 0) {

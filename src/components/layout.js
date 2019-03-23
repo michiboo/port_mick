@@ -5,15 +5,18 @@ import Navbar from "./navbar.js"
 import PageTransition from 'gatsby-plugin-page-transitions';
 
 
+
 export default ({ children }) =>( 
 <html>
-   
-<Navbar>
-    <Navlink link="#Home"/>
-    <Navlink link="#whatIdo" />
-    <Navlink link="#project" />
-    <Navlink link="/contact"/>  
-</Navbar>
+
+            <Navbar>
+            <Navlink link="#whatIdo" />
+            <Navlink link="#project" />
+            <Navlink link="#certification" />
+            <Navlink link="#experience" />
+        </Navbar>
+       
+
 
  <PageTransition>
 <div>{children}</div>

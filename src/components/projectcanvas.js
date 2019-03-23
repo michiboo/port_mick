@@ -1,10 +1,11 @@
 import React from "react"
 
+var offsetX ,offsetY,xcor;
 
 class Pcanvas extends React.Component{
 
     componentDidMount (){
-
+       
 
         window.requestAnimFrame = (function(callback) {
             return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
@@ -15,9 +16,17 @@ class Pcanvas extends React.Component{
     
           var c = this.refs.canvas;
           var ctx = c.getContext("2d");
-          var xcor = 100;
+
+
+
+
+
+
+          xcor = 100;
           var angle= 0;
           var endang = 2 * Math.PI;
+
+
 
 setTimeout(function() {
         var startTime = (new Date()).getTime();
@@ -71,6 +80,11 @@ setTimeout(function() {
     }
     export default Pcanvas
 
+// http://jsfiddle.net/m1erickson/Bgh9d/
+
+   
+
+
 
 function animate( c , ctx, xcor,angle,endang){
     ctx.clearRect(0, 0, c.width, c.height);
@@ -80,6 +94,9 @@ function animate( c , ctx, xcor,angle,endang){
      ctx.moveTo(xcor, 150);
      ctx.lineTo(xcor, 150);
      ctx.arc(xcor, 150, 30, angle, endang);
+
+
+
      ctx.stroke();
      angle += 0.1;
      endang += 0.1;
@@ -126,7 +143,7 @@ function backcollision(c, ctx, xcor,angle,endang){
      angle -= 0.1;
      endang -= 0.1;
     ctx.rotate(0*Math.PI/180);
-    xcor -= 1;
+    
 
 
     //for(; t > 0; t --){
@@ -136,7 +153,7 @@ function backcollision(c, ctx, xcor,angle,endang){
         }
 
        else{ window.requestAnimFrame(function(){
-            backcollision(c, ctx, xcor,angle,endang)
+            backcollision(c, ctx, xcor-2,angle,endang)
     }
     )
 }
